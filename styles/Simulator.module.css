@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.scoreBar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 8px;
+    background-color: #222;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.scoreItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gameArea {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #111;
+    cursor: grab;
+}
+
+.gameArea:active {
+    cursor: grabbing;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+.controls {
+    display: flex;
+    gap: 16px;
+    padding: 12px;
+    background-color: #222;
+    align-items: center;
+}
+
+.controls button {
+    padding: 8px 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #555;
+}
+
+.zoomControls {
+    display: flex;
+    gap: 8px;
+}
+
+.zoomControls button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.healthBarContainer {
+    flex: 1;
+    height: 24px;
+    background-color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 16px;
+}
+
+.healthBar {
+    height: 100%;
+    background-color: #f44336;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.deathScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    color: white;
+    font-size: 2rem;
+}
+
+.scoreDisplay {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.deathScreen button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #f44336;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deathScreen button:hover {
+    background-color: #ff5722;
+}
