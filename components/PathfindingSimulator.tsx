@@ -588,7 +588,7 @@ const PathfindingSimulator: React.FC = () => {
 
         setTerminalGenerateTimer(prev => {
             if (entities.filter(e => e.type === 'terminal').length > 0) return 0;
-            if (prev >= 0) { // *****
+            if (prev >= 300) {
                 generateTerminals();
                 return 0;
             }
@@ -1186,7 +1186,7 @@ const PathfindingSimulator: React.FC = () => {
                 const validX = Math.max(0, Math.min(clickX, grid.width - 1));
                 const validY = Math.max(0, Math.min(clickY, grid.height - 1));
 
-                player.position = { x: validX, y: validY };
+                // player.position = { x: validX, y: validY };
 
                 // Calculate path to clicked position (disable cache temporarily)
                 const path = calculatePath(player.position, { x: validX, y: validY });
